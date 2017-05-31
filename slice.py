@@ -37,7 +37,7 @@ for root, dirs, files in os.walk(input_dir):
             os.makedirs(out_dir)
 
         flows = np.load(in_file)
-        for j in range(flows.shape[2] // 2 - 19):
+        for j in range(flows.shape[2] // 2 - 9):
             np.save("%s_%06d.npy" % (out_file, j), flows[...,j*2:j*2+20])
 
 
