@@ -31,6 +31,7 @@ for root, dirs, files in os.walk(input_dir):
         i += 1
         in_file = join(root, vid)
         out_file = in_file.replace(input_dir, output_dir, 1)
+        out_file += '.npy'
         out_dir = os.path.dirname(out_file)
         print "(%d/%d) Saving to %s" % (i, total, out_file)
         if not os.path.exists(out_dir):
